@@ -8,7 +8,7 @@ function CompteList() {
 
     // Utilisation de useEffect pour effectuer un appel à l'API dès le chargement
     useEffect(() => {
-        axios.get(`http://localhost:8082/banque/comptes`)
+        axios.get(`${API_BASE_URL}/comptes`)
             .then(response => setComptes(response.data)) // Mise à jour de l'état avec les données récupérées
             .catch(error => console.error(error)); // Gestion des erreurs
     }, []); // Le tableau vide indique que l'effet s'exécute uniquement au montage du composant
